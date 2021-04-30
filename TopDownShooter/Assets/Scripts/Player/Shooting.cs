@@ -16,14 +16,17 @@ public class Shooting : MonoBehaviour
 
     void Update()
     {
-        if(Input.GetButtonDown("Fire1"))
+        if (!PauseMenu.isPaused)
         {
-            Shoot();
-        }
+            if (Input.GetButtonDown("Fire1"))
+            {
+                Shoot();
+            }
 
-        if(Input.GetKeyDown(KeyCode.Q))
-        {
-            ShootLaser();
+            if (Input.GetKeyDown(KeyCode.Q))
+            {
+                ShootLaser();
+            }
         }
     }
 

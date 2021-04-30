@@ -15,7 +15,7 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
-       // mousePosition = cam.WorldToScreenPoint(Input.mousePosition);
+     
   
 
     }
@@ -23,10 +23,5 @@ public class PlayerMovement : MonoBehaviour
     private void FixedUpdate()
     {
      rb.MovePosition(rb.position + movement * PlayerMoveSpeed * Time.fixedDeltaTime);
-
-      // Vector2 lookDirection = mousePosition - rb.position;
-      // float angle = Mathf.Atan2(lookDirection.y, lookDirection.x) * Mathf.Rad2Deg - 90f;
-
-      //  rb.rotation = angle;
     }
 }
