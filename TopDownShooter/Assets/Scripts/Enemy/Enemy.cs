@@ -13,7 +13,7 @@ public class Enemy : MonoBehaviour
 
         if (collision.gameObject.CompareTag("Player"))
         {
-            SceneManager.LoadScene(2);
+            SceneManager.LoadScene(1);
         }
         else if (collision.collider.CompareTag("Enemy"))
         {
