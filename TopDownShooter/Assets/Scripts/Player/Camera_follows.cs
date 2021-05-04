@@ -1,4 +1,5 @@
-﻿using System.Collections;
+﻿using System;
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -7,8 +8,16 @@ public class Camera_follows : MonoBehaviour
 
     public Transform player;
 
-    private void FixedUpdate()
+    public Vector3 offset;
+
+
+    private void Start()
     {
-        transform.position = new Vector3(player.position.x, player.position.y, player.position.z);
+        offset = transform.position - player.transform.position;
+    }
+
+    private void Update()
+    {
+        transform.position = player.transform.position + offset;
     }
 }
