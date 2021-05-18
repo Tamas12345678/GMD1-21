@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -15,6 +16,13 @@ public class PlayerMovement : MonoBehaviour
     {
         movement.x = Input.GetAxisRaw("Horizontal");
         movement.y = Input.GetAxisRaw("Vertical");
+
+        //secret win
+        if(Input.GetKeyDown(KeyCode.F))
+        {
+            Scenarios.winScenarios = 4;
+            SceneManager.LoadScene(3);
+        }
      
   
 

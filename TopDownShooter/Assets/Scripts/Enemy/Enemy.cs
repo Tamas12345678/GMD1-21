@@ -5,8 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class Enemy : MonoBehaviour
 {
-   public GameObject player;
-   public bool isDestroyed = false;
+    
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         
@@ -15,10 +15,7 @@ public class Enemy : MonoBehaviour
         {
             SceneManager.LoadScene(1);
         }
-        else if (collision.collider.CompareTag("Enemy"))
-        {
-            Destroy(gameObject);
-        }
+       
 
     }
 }

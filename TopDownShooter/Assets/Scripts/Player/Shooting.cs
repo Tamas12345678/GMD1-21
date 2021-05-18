@@ -6,10 +6,10 @@ using UnityEngine;
 public class Shooting : MonoBehaviour
 {
   public Transform firePoint;
-  public Transform laserPoint;
+  
 
   public GameObject bulletPrefab;
-  public GameObject lazerPrefab;
+ 
 
   public float bulletForce = 20f;
 
@@ -23,19 +23,11 @@ public class Shooting : MonoBehaviour
                 Shoot();
             }
 
-            if (Input.GetKeyDown(KeyCode.Q))
-            {
-                ShootLaser();
-            }
+          
         }
     }
 
-    private void ShootLaser()
-    {
-        GameObject lazerShooting = Instantiate(lazerPrefab, laserPoint.position, laserPoint.rotation);
-        Rigidbody2D rb = lazerShooting.GetComponent<Rigidbody2D>();
-        rb.AddForce(laserPoint.up * bulletForce, ForceMode2D.Impulse);
-    }
+
 
     void Shoot()
     {
