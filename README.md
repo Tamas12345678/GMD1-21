@@ -16,4 +16,9 @@ Assets:
         https://pngtree.com/freebackground/comic-game-over-sunburst-background_1332362.html
         
         https://freesound.org/
+        https://www.google.com/search?q=google+white+square&sxsrf=ALeKk01syaXKRmb-uA6H722oHNkNNvhyfQ:1621372214171&source=lnms&tbm=isch&sa=X&ved=2ahUKEwj98_6WktTwAhXMk4sKHdbrBmIQ_AUoAXoECAIQAw&biw=1707&bih=886
+        
+ Code: https://www.youtube.com/watch?v=BKCsH8mQ-lM&t=101s
+        
+ Youtube video: https://www.youtube.com/watch?v=DZRlAiQUdmU
        
