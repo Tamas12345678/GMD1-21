@@ -1,36 +1,29 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using System.Linq;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class EnemyKillCounter : MonoBehaviour
 {
-    private Enemy[] _enemies;
+    private List<Enemy> _enemies = new List<Enemy>();
 
 
     private void OnEnable()
     {
-        _enemies = FindObjectsOfType<Enemy>();
+        
+        _enemies.AddRange(FindObjectsOfType<Enemy>());
     }
 
-    // Update is called once per frame
+    
     void Update()
     {
-        foreach(Enemy enemy in _enemies)
+       
+        if(_enemies.Where(enemy => enemy != null).ToList().Count == 0)
         {
-            if(enemy != null)
-            {
-               
-                return;
-                
-            } else
-            {
-                Scenarios.winScenarios = 5;
-                SceneManager.LoadScene(3);
-            }
-            
+            Scenarios.winScenarios = 5;
+            SceneManager.LoadScene(3);
         }
-
         
     }
    
